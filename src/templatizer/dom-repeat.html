@@ -553,6 +553,7 @@ Then the `observe` property should be configured as follows:
         ShadyDOM.patch(inst.root);
       }
       this.parentNode.insertBefore(inst.root, beforeNode);
+      customElements.flush && customElements.flush();
       this._instances[instIdx] = inst;
       return inst;
     }
